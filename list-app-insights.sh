@@ -1,0 +1,1 @@
+az monitor app-insights component show --query "[].{appId:appId, applicationId:applicationId}"

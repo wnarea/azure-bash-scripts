@@ -1,0 +1,13 @@
+bash ./kv-access-policy.sh kv-elita-ce-Test-US RGElitaDev "Assurant Spoke NorthCentralUS SharedNonProd"
+bash ./kv-access-policy.sh kv-elita-ce-Test-SA RGElitaDev "Assurant Spoke NorthCentralUS SharedNonProd"
+bash ./kv-access-policy.sh kv-elita-ce-Test-JP RGElitaDev "Assurant Spoke JapanEast SharedNonProd"
+bash ./kv-access-policy.sh kv-elita-ce-Test-EU RGElitaDev "Assurant Spoke UKSouth SharedNonProd"
+bash ./kv-access-policy.sh kv-elita-ce-Test-DE RGElitaDev "Assurant Spoke Germany West Central SharedNonProd"
+bash ./kv-access-policy.sh kv-elita-ce-Test-AP RGElitaDev "Assurant Spoke AustraliaSouthEast SharedNonProd"
+#
+az keyvault certificate create --vault-name kv-elita-ce-Test-US --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke NorthCentralUS SharedNonProd"
+az keyvault certificate create --vault-name kv-elita-ce-Test-SA --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke NorthCentralUS SharedNonProd"
+az keyvault certificate create --vault-name kv-elita-ce-Test-JP --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke JapanEast SharedNonProd"
+az keyvault certificate create --vault-name kv-elita-ce-Test-EU --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke UKSouth SharedNonProd"
+az keyvault certificate create --vault-name kv-elita-ce-Test-DE --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke Germany West Central SharedNonProd"
+az keyvault certificate create --vault-name kv-elita-ce-Test-AP --name elita-function-apps --policy "$(az keyvault certificate get-default-policy)" --subscription "Assurant Spoke AustraliaSouthEast SharedNonProd"
